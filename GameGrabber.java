@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
+
 /**
  * This class represents a reusable menu system which can be used with multiple classes
  *
@@ -70,7 +71,11 @@ public class GameGrabber {
                 new MathTestGame(rng, 1, 10, '+'),
                 new MathTestGame(rng, 1, 10, '*'),
                 new MathTestGame(rng, 1, 10, '-'),
-                new MathTestGame(rng, 1, 10, '/')
+                new MathTestGame(rng, 1, 10, '/'),
+                new NumberGuesser(rng, 10, 100),
+                new NumberGuesser(rng, 20, 50),
+                new Hangman(new WordsList(rng), 3, 10, 10),
+                new Hangman(new WordsList(rng), 1, 50, 100)
         }, new Scanner(System.in));
         grabber.doMenu();
     }
